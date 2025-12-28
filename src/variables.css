@@ -1,0 +1,33 @@
+:root {
+  --grey: rgb(16, 16, 16);
+  --grey-100: rgb(25, 25, 27);
+  --light-grey: rgb(31, 31, 31);
+  --lighter-grey: rgb(194, 194, 194);
+  --border-light-grey: rgb(40, 40, 40);
+  --green: rgb(40, 233, 140);
+}
+
+.bg-grey {
+  background-color: var(--grey);
+}
+
+.bg-grey-100 {
+  background-color: var(--grey-100);
+}
+
+.bg-light-grey {
+  background-color: var(--light-grey);
+}
+
+.border-light-grey {
+  border: 1px solid var(--border-light-grey);
+}
+
+.bg-green {
+  color: black;
+  background-color: var(--green);
+}
+
+.text-green {
+  color: var(--green);
+}

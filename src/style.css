@@ -1,0 +1,229 @@
+@import "./resetters.css";
+@import "./variables.css";
+
+div.clock {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  padding: 5px 10px;
+  border-radius: 6px;
+  pointer-events: none;
+  transition: all 1s;
+}
+
+div.main {
+  display: grid;
+  grid-template-columns: 22rem 1fr;
+  align-items: start;
+  gap: 2rem;
+
+  max-width: 1300px;
+  margin-inline: auto;
+  margin-top: 4rem;
+}
+
+div.left {
+  position: sticky;
+  top: 4rem;
+  border-radius: 1rem;
+  padding: 1rem;
+  overflow: hidden;
+
+  div.avatar {
+    background: linear-gradient(var(--grey-100) 50%, var(--grey));
+    margin-bottom: 1.5rem;
+    border-radius: 7px;
+    height: 280px;
+    overflow: hidden;
+
+    & > img {
+      margin-inline: auto;
+      width: 60%;
+      margin-top: 30px;
+    }
+  }
+
+  .info {
+    & > * {
+      width: fit-content;
+      margin-inline: auto;
+      margin-bottom: 1rem;
+    }
+
+    p.available {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 6px 14px;
+      border-radius: 8px;
+
+      & > span {
+        width: 10px;
+        height: 10px;
+        background-color: var(--green);
+        border-radius: 50%;
+      }
+    }
+
+    h2 {
+      margin-bottom: 0.2rem;
+    }
+
+    p.email {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 14px;
+      text-decoration: underline;
+      transition: color 0.3s;
+
+      &:hover {
+        color: hsl(from currentColor h s l / 0.5);
+      }
+
+      svg {
+        width: 14px;
+      }
+    }
+
+    div.tags {
+      button {
+        border-color: var(--border-light-grey);
+        border-radius: 8px;
+        transition: background-color 0.3s;
+
+        a {
+          border-radius: inherit;
+          padding: 8px 12px;
+          display: block;
+        }
+
+        &:hover {
+          background-color: var(--grey-100);
+        }
+      }
+    }
+
+    button.download-cv {
+      border: none;
+      display: block;
+      width: 100%;
+      padding: 10px 12px;
+      margin-bottom: 0;
+      border-radius: 8px;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: hsl(from var(--green) h s l / 0.8);
+      }
+    }
+  }
+}
+
+div.right {
+  grid-column: -1;
+
+  section.intro {
+    margin-bottom: 4rem;
+
+    h1 {
+      font-size: 3rem;
+      font-weight: 600;
+      line-height: 1.25;
+      margin-bottom: 1.5rem;
+
+      span:last-child {
+        display: block;
+      }
+    }
+  }
+}
+
+section {
+  margin-bottom: 3rem;
+}
+
+section h2.heading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+
+div.card {
+  background-color: var(--grey);
+  border: 1px solid var(--border-light-grey);
+  padding: 1rem;
+  border-radius: 10px;
+
+  div.card-intro {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--border-light-grey);
+    padding-bottom: 1rem;
+
+    div.card-intro-title p {
+      color: var(--lighter-grey);
+      font-size: 14px;
+      margin-top: 5px;
+    }
+
+    p.card-intro-duration {
+      background-color: var(--light-grey);
+      border: 1px solid var(--border-light-grey);
+      padding: 8px 10px;
+      border-radius: 6px;
+    }
+  }
+
+  p.card-description {
+    padding-top: 1rem;
+    color: var(--lighter-grey);
+  }
+}
+
+.cols-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+section.projects {
+  div.card.project {
+    transition: all 0.3s;
+
+    &:hover {
+      background-color: var(--grey-100);
+      scale: 1.025;
+    }
+
+    div.project-thumbnail {
+      height: 15rem;
+      margin-bottom: 1rem;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 8px;
+      }
+    }
+  }
+}
+
+section.stakes {
+  div.card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    div.logo {
+      img,
+      svg {
+        width: 40px;
+      }
+    }
+  }
+}
