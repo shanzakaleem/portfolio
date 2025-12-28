@@ -213,6 +213,13 @@ section.projects {
   }
 }
 
+section.education {
+  div.card div.card-intro {
+    border-bottom: none;
+    padding: 0;
+  }
+}
+
 section.stakes {
   div.card {
     display: flex;
